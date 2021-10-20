@@ -1,0 +1,12 @@
+@import "./variables.scss";
+@mixin Button {
+  font-size: 25px;
+  background-color: $background-element-color;
+  padding: 0;
+  border-radius: 20px;
+  height: 60px;
+  color: $text-color;
+  border: 1px solid $text-color;
+  outline: none;
+  font-size: $title;
+}

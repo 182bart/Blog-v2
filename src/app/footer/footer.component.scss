@@ -1,0 +1,15 @@
+@import "./../../GlobalStyle/variables.scss";
+
+footer {
+  display: block;
+  border: $text-color 1px solid;
+  text-align: center;
+  margin-top: 50px;
+  color: $text-color;
+  background-color: $background-element-color;
+  clear: both;
+  margin-bottom: 0;
+  font-size: $text;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

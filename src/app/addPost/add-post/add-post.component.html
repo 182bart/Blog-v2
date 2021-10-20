@@ -1,0 +1,17 @@
+
+<form [formGroup]="postForm" novalidate>
+  <input type="text" formControlName="title" placeholder=" Tytuł Postu"/>
+  <p *ngIf="showErrors && postForm.get('title').errors?.minlength">
+    Tytuł musić mieć co najmniej 2 znaki!
+  </p>
+  <textarea formControlName="text" placeholder=" Treść Postu"></textarea>
+  <p *ngIf="showErrors && postForm.get('text').errors?.minlength">
+    Treść postu musić sie składa co najmiej z 10 znaków!
+  </p>
+  <button (click)="add()">Publikuj</button>
+</form>
+
+<div *ngIf="isActive" class="postStatus">
+  <p class="title">{{ postInfo }}</p>
+  <button (click)="close()">Zamknij</button>
+</div>

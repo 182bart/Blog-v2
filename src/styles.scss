@@ -1,0 +1,10 @@
+@import  "./GlobalStyle/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body{
+    background-color: $background-color !important;
+    margin: 0;
+    padding: 0;
+    height: 100% !important; 
+    font-family: 'Lato', sans-serif !important;
+}

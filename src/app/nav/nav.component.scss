@@ -1,0 +1,11 @@
+@import "../../GlobalStyle/buttons.scss";
+
+.button {
+  @include Button;
+}
+
+@media only screen and (max-width: 600px) {
+  button {
+    margin-top: 20px;
+  }
+}

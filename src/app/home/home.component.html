@@ -1,0 +1,27 @@
+<div class=" position-relative">
+
+  <div class=" grid search mb-4 search-x">
+    <input
+      class="col-sm-6 col-lg-3 input mr-lg-3 mb-3"
+      placeholder="Wpisz Tytuł Postu"
+      #query/>
+    <button
+      class="col-sm-6 col-lg-2 button"
+      (click)="search(query.value)"
+      routerLink="/">
+      Szukaj
+    </button>
+  </div>
+
+  <article *ngFor="let post of postList">
+    <div class="title d-flex justify-content-between">
+      <p>{{ post.title | titlecase }}</p>
+      <button (click)="del(post)">
+        <img src="../../assets/dustbin.svg" />
+      </button>
+    </div>
+    <div class="text">
+      <a routerLink="/post/{{ post.id }}">{{ post.text | slice: 0:250 }}...</a>
+    </div>
+  </article>
+</div>
